@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.UserVerifyActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_verify_main_fragment"
+        class="com.seeds.seeds_birthdayreminder.Fragment.DefaultFragmentHomePage"
+        tools:layout="@layout/fragment_default_fragment_home_page"/>
+</android.support.constraint.ConstraintLayout>
