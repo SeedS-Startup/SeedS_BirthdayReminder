@@ -4,6 +4,7 @@ package com.seeds.seeds_birthdayreminder.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,8 @@ public class CalendarFragment extends Fragment {
         Helper.mainActivity_leftIcon.setVisibility(View.INVISIBLE);
         Helper.mainActivity_centerText.setText("Calendar");
         tuneRecyclerView(view);
+        Helper.mainActivity_leftLayoutIcon.setImageResource(R.mipmap.birthday_grey);
+        Helper.mainActivity_rightLayoutIcon.setImageResource(R.mipmap.calendar_green);
         return view;
     }
 

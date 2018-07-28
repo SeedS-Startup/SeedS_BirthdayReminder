@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
 
         // This work only for android 4.4+
-        if(currentApiVersion >= Build.VERSION_CODES.KITKAT)
-        {
+        if (currentApiVersion >= Build.VERSION_CODES.KITKAT) {
 
             getWindow().getDecorView().setSystemUiVisibility(flags);
 
@@ -48,14 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // show up and won't hide
             final View decorView = getWindow().getDecorView();
             decorView
-                    .setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener()
-                    {
+                    .setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
 
                         @Override
-                        public void onSystemUiVisibilityChange(int visibility)
-                        {
-                            if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0)
-                            {
+                        public void onSystemUiVisibilityChange(int visibility) {
+                            if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
                                 decorView.setSystemUiVisibility(flags);
                             }
                         }
@@ -73,22 +69,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void findViews() {
         Helper.mainActivity_leftLayout = findViewById(R.id.left_fragment_view);
         Helper.mainActivity_rightLayout = findViewById(R.id.right_fragment_view);
-        Helper.mainActivity_fab =findViewById(R.id.add_birthday_icon);
-        Helper.mainActivity_setting=findViewById(R.id.main_setting_icon);
-        Helper.mainActivity_leftIcon=findViewById(R.id.main_back_icon);
-        Helper.mainActivity_centerText=findViewById(R.id.center_text);
+        Helper.mainActivity_leftLayoutIcon = findViewById(R.id.left_layout_icon);
+        Helper.mainActivity_rightLayoutIcon = findViewById(R.id.right_layout_icon);
+        Helper.mainActivity_fab = findViewById(R.id.add_birthday_icon);
+        Helper.mainActivity_setting = findViewById(R.id.main_setting_icon);
+        Helper.mainActivity_leftIcon = findViewById(R.id.main_back_icon);
+        Helper.mainActivity_centerText = findViewById(R.id.center_text);
     }
 
     @Override
     public void onClick(View v) {
-        Fragment fragment=null;
-        switch (v.getId())
-        {
+        Fragment fragment = null;
+        switch (v.getId()) {
             case R.id.left_fragment_view:
-                fragment=new ListFragment();
+                fragment = new ListFragment();
                 break;
             case R.id.right_fragment_view:
-                fragment=new CalendarFragment();
+                fragment = new CalendarFragment();
                 break;
         }
         getSupportFragmentManager()
@@ -100,11 +97,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @SuppressLint("NewApi")
     @Override
-    public void onWindowFocusChanged(boolean hasFocus)
-    {
+    public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && hasFocus)
-        {
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && hasFocus) {
             getWindow().getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                             | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION

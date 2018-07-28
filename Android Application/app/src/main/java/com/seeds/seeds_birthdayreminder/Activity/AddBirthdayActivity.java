@@ -30,10 +30,6 @@ public class AddBirthdayActivity extends AppCompatActivity {
             finish();
             startActivity(new Intent(AddBirthdayActivity.this, MainActivity.class));
         });
-        Helper.addBirthday_setting.setOnClickListener(v -> {
-            finish();
-            startActivity(new Intent(AddBirthdayActivity.this, SettingActivity.class));
-        });
         Helper.addBirthday_date.setOnClickListener(v -> {
 
             // TODO: 2018-07-25 initial calendar object woth the selected date by user
@@ -77,8 +73,7 @@ public class AddBirthdayActivity extends AppCompatActivity {
         Helper.addBirthday_letter = findViewById(R.id.addBirthday_letter);
         Helper.addBirthday_age = findViewById(R.id.addBirthday_age);
         Helper.addBirthday_relation = findViewById(R.id.addBirthday_relation);
-        Helper.addBirthday_setting = findViewById(R.id.main_setting_icon);
-        Helper.addBirthday_back = findViewById(R.id.main_back_icon);
+        Helper.addBirthday_back = findViewById(R.id.addBirthday_back);
         Helper.addBirthday_saveBtn = findViewById(R.id.add_birthday_save);
     }
 }

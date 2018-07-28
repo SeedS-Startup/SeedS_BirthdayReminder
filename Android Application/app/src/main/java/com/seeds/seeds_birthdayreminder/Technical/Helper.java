@@ -3,6 +3,7 @@ package com.seeds.seeds_birthdayreminder.Technical;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,6 +15,9 @@ public class Helper {
     public static ImageView mainActivity_setting;
     public static ImageView mainActivity_leftIcon;
     public static TextView mainActivity_centerText;
+    public static ImageView mainActivity_rightLayoutIcon;
+    public static ImageView mainActivity_leftLayoutIcon;
+
 
     public static EditText addBirthday_name;
     public static TextView addBirthday_date;
@@ -22,7 +26,6 @@ public class Helper {
     public static EditText addBirthday_letter;
     public static EditText addBirthday_age;
     public static EditText addBirthday_relation;
-    public static ImageView addBirthday_setting;
     public static ImageView addBirthday_back;
     public static TextView addBirthday_saveBtn;
 
