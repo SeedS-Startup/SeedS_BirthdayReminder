@@ -42,6 +42,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="25"
                     android:background="@drawable/rectangle"
+                    android:id="@+id/picture"
                     />
 
                 <Space
@@ -68,6 +69,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="31.5"
                             android:text="August"
+                            android:id="@+id/month"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/green_a"
@@ -78,6 +80,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="8"
                             android:text="20"
+                            android:id="@+id/day"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/grey_a"
@@ -98,6 +101,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="15"
                             android:text="1977"
+                            android:id="@+id/year"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/grey_a"
@@ -119,6 +123,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="11"
                             android:text="43"
+                            android:id="@+id/age"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/green_a"
@@ -153,6 +158,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="49"
                         android:text="Amy Adams"
+                        android:id="@+id/fullName"
                         android:textColor="#000000"
                         android:textSize="15sp"
                         android:gravity="center"/>
@@ -180,6 +186,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="12"
                             android:text="30"
+                            android:id="@+id/days_to_event"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:textColor="@color/green_a"

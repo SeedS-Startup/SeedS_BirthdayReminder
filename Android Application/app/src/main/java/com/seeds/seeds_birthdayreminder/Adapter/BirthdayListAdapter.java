@@ -38,7 +38,7 @@ public class BirthdayListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         BirthdayEvent birthdayEvent=birthdayEvents.get(position);
-       // holder.itemView.findViewById(R.id.).
+        //holder.itemView.findViewById(R.id.fullName).setT
 
     }
 
