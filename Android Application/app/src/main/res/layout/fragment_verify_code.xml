@@ -270,7 +270,7 @@
             android:layout_weight="20"
             android:text="Powered by"
             android:textColor="@color/grey_a"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:gravity="center_vertical"/>
 
         <TextView
