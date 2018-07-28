@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.SettingActivity" />
-        <activity android:name=".Activity.AddBirthdayActivity" />
+        <activity android:name=".Activity.AddBirthdayActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".Activity.EditBirthdayActivity" />
         <activity android:name=".Activity.UserVerifyActivity"></activity>
     </application>

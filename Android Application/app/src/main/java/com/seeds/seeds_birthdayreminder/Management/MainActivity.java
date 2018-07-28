@@ -47,13 +47,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // show up and won't hide
             final View decorView = getWindow().getDecorView();
             decorView
-                    .setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
-
-                        @Override
-                        public void onSystemUiVisibilityChange(int visibility) {
-                            if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
-                                decorView.setSystemUiVisibility(flags);
-                            }
+                    .setOnSystemUiVisibilityChangeListener(visibility -> {
+                        if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
+                            decorView.setSystemUiVisibility(flags);
                         }
                     });
         }
