@@ -34,7 +34,7 @@ public class ListFragment extends Fragment {
         Helper.birthdayRecyclerView.setHasFixedSize(true);
         Helper.birthdayRecyclerView.setLayoutManager(Helper.birthdayLayoutManager);
         Helper.birthdayAdapter = new BirthdayListAdapter(items, view.getContext(), Helper.birthdayRecyclerView);
-        ((BirthdayListAdapter) Helper.birthdayAdapter).setLoadMoreListener(() -> {
+        /*((BirthdayListAdapter) Helper.birthdayAdapter).setLoadMoreListener(() -> {
 
             Helper.birthdayRecyclerView.post(() -> {
                 int index = items.size() - 1;
@@ -42,7 +42,7 @@ public class ListFragment extends Fragment {
             });
             //Calling loadMore function in Runnable to fix the
             // java.lang.IllegalStateException: Cannot call this method while RecyclerView is computing a layout or scrolling error
-        });
+        });*/
         Helper.birthdayRecyclerView.setAdapter(Helper.birthdayAdapter);
     }
 

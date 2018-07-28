@@ -36,13 +36,13 @@ public class BirthdayOverview extends Fragment {
 
     private void findViews(View view) {
         Helper.overview_age = view.findViewById(R.id.overview_age);
-        Helper.overview_date = view.findViewById(R.id.overview_age);
-        Helper.overview_email = view.findViewById(R.id.overview_age);
-        Helper.overview_letter = view.findViewById(R.id.overview_age);
-        Helper.overview_relation = view.findViewById(R.id.overview_age);
-        Helper.overview_phone = view.findViewById(R.id.overview_age);
-        Helper.overview_name = view.findViewById(R.id.overview_age);
-        Helper.overview_nextBirthday = view.findViewById(R.id.overview_age);
-        Helper.overview_lastBirthday = view.findViewById(R.id.overview_age);
+        Helper.overview_date = view.findViewById(R.id.overview_date);
+        Helper.overview_email = view.findViewById(R.id.overview_email);
+        Helper.overview_letter = view.findViewById(R.id.overview_letter);
+        Helper.overview_relation = view.findViewById(R.id.overview_relation);
+        Helper.overview_phone = view.findViewById(R.id.overview_phone);
+        Helper.overview_name = view.findViewById(R.id.overview_name);
+        Helper.overview_nextBirthday = view.findViewById(R.id.overview_nextbd);
+        Helper.overview_lastBirthday = view.findViewById(R.id.overview_lastbd);
     }
 }

@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void findViews() {
         Helper.mainActivity_leftLayout = findViewById(R.id.left_fragment_view);
         Helper.mainActivity_rightLayout = findViewById(R.id.right_fragment_view);
-        Helper.mainActivity_fab =findViewById(R.id.main_fab);
+        Helper.mainActivity_fab =findViewById(R.id.add_birthday_icon);
         Helper.mainActivity_setting=findViewById(R.id.main_setting_icon);
-        Helper.mainActivity_leftIcon=findViewById(R.id.left_icon);
+        Helper.mainActivity_leftIcon=findViewById(R.id.main_back_icon);
     }
 
     @Override

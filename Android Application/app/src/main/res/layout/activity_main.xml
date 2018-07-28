@@ -7,12 +7,37 @@
     android:layout_weight="100"
     android:orientation="vertical"
     tools:context=".Management.MainActivity">
-
-    <view
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/grey_c"/>
+        android:layout_weight="8">
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:paddingEnd="20dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:src="@mipmap/settings"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:id="@+id/main_setting_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Up coming"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:id="@+id/center_text"/>
+            <ImageView
+                android:layout_width="35dp"
+                android:src="@mipmap/balloon"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:id="@+id/main_back_icon"/>
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v7.widget.Toolbar>
 
     <fragment
         android:layout_width="match_parent"
@@ -74,11 +99,12 @@
             </LinearLayout>
 
 
-            <ImageButton
+            <android.support.design.widget.FloatingActionButton
                 android:layout_width="0dp"
+                android:src="@mipmap/add"
                 android:layout_height="match_parent"
                 android:layout_weight="15"
-                android:background="@mipmap/add"/>
+                android:id="@+id/add_birthday_icon"/>
 
         <LinearLayout
             android:layout_width="0dp"

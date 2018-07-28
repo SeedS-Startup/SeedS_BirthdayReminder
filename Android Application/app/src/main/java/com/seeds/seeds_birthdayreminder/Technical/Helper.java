@@ -22,9 +22,9 @@ public class Helper {
     public static EditText addBirthday_letter;
     public static EditText addBirthday_age;
     public static EditText addBirthday_relation;
-    public static EditText addBirthday_setting;
-    public static EditText addBirthday_back;
-    public static EditText addBirthday_saveBtn;
+    public static ImageView addBirthday_setting;
+    public static ImageView addBirthday_back;
+    public static TextView addBirthday_saveBtn;
 
     public static RecyclerView birthdayRecyclerView;
     public static RecyclerView.LayoutManager birthdayLayoutManager;

@@ -70,15 +70,15 @@ public class AddBirthdayActivity extends AppCompatActivity {
     }
 
     private void findViews() {
-        Helper.addBirthday_name = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_date = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_email = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_phone = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_letter = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_age = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_relation = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_setting = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_back = findViews(R.id.addBirthday_name);
-        Helper.addBirthday_saveBtn = findViews(R.id.addBirthday_name);
+        Helper.addBirthday_name = findViewById(R.id.addBirthday_name);
+        Helper.addBirthday_date = findViewById(R.id.addBirthday_date);
+        Helper.addBirthday_email = findViewById(R.id.addBirthday_email);
+        Helper.addBirthday_phone = findViewById(R.id.addBirthday_phone);
+        Helper.addBirthday_letter = findViewById(R.id.addBirthday_letter);
+        Helper.addBirthday_age = findViewById(R.id.addBirthday_age);
+        Helper.addBirthday_relation = findViewById(R.id.addBirthday_relation);
+        Helper.addBirthday_setting = findViewById(R.id.main_setting_icon);
+        Helper.addBirthday_back = findViewById(R.id.main_back_icon);
+        Helper.addBirthday_saveBtn = findViewById(R.id.add_birthday_save);
     }
 }

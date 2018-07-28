@@ -37,7 +37,7 @@ public class CalendarFragment extends Fragment {
         Helper.calendarRecyclerView.setHasFixedSize(true);
         Helper.calendarRecyclerView.setLayoutManager(Helper.calendarLayoutManager);
         Helper.calendarAdapter = new CalendarListAdapter(items, view.getContext(), Helper.calendarRecyclerView);
-        ((BirthdayListAdapter) Helper.calendarAdapter).setLoadMoreListener(() -> {
+       /* ((BirthdayListAdapter) Helper.calendarAdapter).setLoadMoreListener(() -> {
 
             Helper.calendarRecyclerView.post(() -> {
                 int index = items.size() - 1;
@@ -45,7 +45,7 @@ public class CalendarFragment extends Fragment {
             });
             //Calling loadMore function in Runnable to fix the
             // java.lang.IllegalStateException: Cannot call this method while RecyclerView is computing a layout or scrolling error
-        });
+        });*/
         Helper.calendarRecyclerView.setAdapter(Helper.calendarAdapter);
     }
 
