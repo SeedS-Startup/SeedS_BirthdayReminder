@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Helper.mainActivity_fab =findViewById(R.id.add_birthday_icon);
         Helper.mainActivity_setting=findViewById(R.id.main_setting_icon);
         Helper.mainActivity_leftIcon=findViewById(R.id.main_back_icon);
+        Helper.mainActivity_centerText=findViewById(R.id.center_text);
     }
 
     @Override
