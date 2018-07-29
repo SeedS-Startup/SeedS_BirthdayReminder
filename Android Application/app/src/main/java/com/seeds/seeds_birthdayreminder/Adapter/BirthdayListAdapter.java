@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.seeds.seeds_birthdayreminder.Configuration.Convertor;
 import com.seeds.seeds_birthdayreminder.Entity.BirthdayEvent;
 import com.seeds.seeds_birthdayreminder.R;
 
@@ -55,8 +56,8 @@ public class BirthdayListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         day.setText(birthdayEvent.getBirthDate().get(Calendar.DAY_OF_MONTH));
         month.setText(birthdayEvent.getBirthDate().getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH ));
         year.setText(birthdayEvent.getBirthDate().get(Calendar.YEAR));
-        //daysToEvent.setText(birthdayEvent.);
-       // picture.set
+        daysToEvent.setText(Convertor.getDaysBetween(Calendar.getInstance(),birthdayEvent.getBirthDate()));
+        picture.setImageBitmap(birthdayEvent.getPicture());
 
 
     }

@@ -68,17 +68,11 @@ public class Convertor {
         int months = (int) (difference / (1000 * 60 * 60 * 24 * 30));
         int years = (int) (difference / (1000 * 60 * 60 * 24 * 30 * 12));
 
-        if (years != 0) {
-
-            return Math.abs(years) + " years "+(years<0 ? "ago " : "");
-
-        }
-        else if (months != 0)
-            return Math.abs(months) + " months "+(months<0 ? "ago" : "");
-        else if (days != 0)
-            return Math.abs(days) + " days "+(days<0 ? "ago" : "");
+        //may have some problems
+         if (Math.abs(days)-(years*30 * 12)!= 0)
+            return (Math.abs(days)-(years*30 * 12) )+ " days "+(days<0 ? "ago" : "");
         else
-            return Math.abs(hours) + " hours "+(hours<0 ? "ago" : "");
+            return (Math.abs(hours)-(days*24))+ " hours "+(hours<0 ? "ago" : "");
 
     }
 
