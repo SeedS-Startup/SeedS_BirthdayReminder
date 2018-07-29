@@ -23,40 +23,43 @@ public class BirthdayListAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     private RecyclerView birthdayRecyclerView;
 
     public BirthdayListAdapter(List<BirthdayEvent> items, Context context, RecyclerView birthdayRecyclerView) {
-        birthdayEvents=items;
-        this.context=context;
-        this.birthdayRecyclerView=birthdayRecyclerView;
+        birthdayEvents = items;
+        this.context = context;
+        this.birthdayRecyclerView = birthdayRecyclerView;
 
     }
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        View view;
         public MyViewHolder(View view) {
             super(view);
+            this.view = view;
         }
     }
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.birthday_item_xml,parent,false));
+        return new MyViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.birthday_item_xml, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        BirthdayEvent birthdayEvent=birthdayEvents.get(position);
-        TextView age=holder.itemView.findViewById(R.id.fullName);
-        TextView fullName=holder.itemView.findViewById(R.id.fullName);
-        TextView day=holder.itemView.findViewById(R.id.day);
-        TextView month=holder.itemView.findViewById(R.id.month);
-        TextView year=holder.itemView.findViewById(R.id.year);
-        TextView daysToEvent=holder.itemView.findViewById(R.id.days_to_event);
-        ImageView picture=holder.itemView.findViewById(R.id.picture);
+        BirthdayEvent birthdayEvent = birthdayEvents.get(position);
+        TextView age = holder.itemView.findViewById(R.id.fullName);
+        TextView fullName = holder.itemView.findViewById(R.id.fullName);
+        TextView day = holder.itemView.findViewById(R.id.day);
+        TextView month = holder.itemView.findViewById(R.id.month);
+        TextView year = holder.itemView.findViewById(R.id.year);
+        TextView daysToEvent = holder.itemView.findViewById(R.id.days_to_event);
+        ImageView picture = holder.itemView.findViewById(R.id.picture);
 
         age.setText(birthdayEvent.getAge());
         fullName.setText(birthdayEvent.getFullName());
         day.setText(birthdayEvent.getBirthDate().get(Calendar.DAY_OF_MONTH));
-        month.setText(birthdayEvent.getBirthDate().getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH ));
+        month.setText(birthdayEvent.getBirthDate().getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH));
         year.setText(birthdayEvent.getBirthDate().get(Calendar.YEAR));
-        daysToEvent.setText(Convertor.getDaysBetween(Calendar.getInstance(),birthdayEvent.getBirthDate()));
+        daysToEvent.setText(Convertor.getDaysBetween(Calendar.getInstance(), birthdayEvent.getBirthDate()));
         picture.setImageBitmap(birthdayEvent.getPicture());
 
 
