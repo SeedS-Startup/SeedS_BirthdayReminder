@@ -60,7 +60,7 @@ public class Convertor {
         return ret.toString();
     }
 
-    public static String getDaysBetween(Calendar calendarPrecede, Calendar calendarBefore) {
+    public static int getDaysBetween(Calendar calendarPrecede, Calendar calendarBefore) {
 
         long difference = calendarPrecede.getTimeInMillis() - calendarBefore.getTimeInMillis();
         int hours = (int) (difference / (1000 * 60 * 60));
@@ -70,9 +70,9 @@ public class Convertor {
 
         //may have some problems
          if (Math.abs(days)-(years*30 * 12)!= 0)
-            return (Math.abs(days)-(years*30 * 12) )+ " days "+(days<0 ? "ago" : "");
+            return (Math.abs(days)-(years*30 * 12) );
         else
-            return (Math.abs(hours)-(days*24))+ " hours "+(hours<0 ? "ago" : "");
+            return 0;
 
     }
 
