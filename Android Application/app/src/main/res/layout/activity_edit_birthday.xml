@@ -1,418 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:weightSum="100"
-    tools:context=".Activity.AddBirthdayActivity">
+    android:background="@color/white"
+    tools:context=".Activity.EditBirthdayActivity">
 
-    <Space
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_gravity="top"
         android:weightSum="100">
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8" />
 
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
-            android:background="@mipmap/back"
-            android:orientation="horizontal" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="68"
-            android:gravity="center"
-            android:text="Edit"
-            android:textColor="@color/grey_c"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="7"
-            android:background="@mipmap/settings"
-            android:orientation="horizontal" />
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="8" />
-
-
-    </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:background="@color/grey_b" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="15"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="36.5" />
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="28">
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/ic_launcher_background"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
+                android:id="@+id/editBirthday_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@mipmap/edit_c"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="8"
+                android:src="@mipmap/back" />
 
-        </android.support.constraint.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="68"
+                android:gravity="center"
+                android:text="Edit"
+                android:textColor="@color/grey_c"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:src="@mipmap/settings"
+                android:visibility="invisible" />
 
-    </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>
 
-    <Space
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="4" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="58.5"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="10" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="80"
-            android:orientation="vertical"
-            android:weightSum="100">
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="14"
-                android:orientation="vertical"
-                android:weightSum="100">
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:text="Name"
-                    android:textColor="@color/grey_c"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="10" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="Alex Julig"
-                    android:textSize="15sp" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2.5"
-                    android:background="@color/green_b" />
-
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/balloon"
+                    android:id="@+id/editBirthday_photo"
+                    />
             </LinearLayout>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5" />
+                android:layout_height="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="14"
-                android:orientation="vertical"
-                android:weightSum="100">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:text="Date"
-                    android:textColor="@color/grey_c"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="10" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="1998/01/19"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:clickable="true"/>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:background="@color/green_b" />
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="14"
-                android:orientation="vertical"
-                android:weightSum="100">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:text="Email (Optional)"
-                    android:textColor="@color/grey_c"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="10" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="example@gmail.com"
-                    android:textSize="15sp" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:background="@color/green_b" />
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="14"
-                android:orientation="vertical"
-                android:weightSum="100">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:text="Phone (Optional)"
-                    android:textColor="@color/grey_c"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="10" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="35"
-                    android:background="@null"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:text="09375679821"
-                    android:textSize="15sp" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="3"
-                    android:background="@color/green_b" />
-
-            </LinearLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="5" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="18"
-                android:orientation="vertical"
-                android:weightSum="100">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="25"
-                    android:text="Letter"
-                    android:textColor="@color/grey_c"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="10" />
+                android:layout_height="match_parent"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="65"
-                    android:background="@drawable/feild"
-                    android:orientation="horizontal"
-                    android:weightSum="100">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Name"
+                        android:textColor="@color/grey_c"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
 
                     <Space
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="6" />
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
 
                     <EditText
+                        android:id="@+id/editBirthday_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="Alex Julig"
+                        android:maxLines="1"
+                        android:textColorHint="@color/grey_b"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textColor="@color/grey_c"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <TextView
+                        android:id="@+id/editBirthday_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="1998/01/19"
+                        android:maxLines="1"
+                        android:textColorHint="@color/grey_b"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email (Optional)"
+                        android:textColor="@color/grey_c"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <EditText
+                        android:id="@+id/editBirthday_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="example@gmail.com"
+                        android:maxLines="1"
+                        android:textColorHint="@color/grey_b"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone (Optional)"
+                        android:textColor="@color/grey_c"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <EditText
+                        android:id="@+id/editBirthday_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="09375679821"
+                        android:maxLines="1"
+                        android:textColorHint="@color/grey_b"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Letter"
+                        android:textColor="@color/grey_c"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <EditText
+                        android:id="@+id/editBirthday_letter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Happy Birthday My Dear..."
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:textColorHint="@color/grey_b"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editBirthday_age"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="88"
-                        android:background="@null"
-                        android:text="Happy Birthday My Dear..."
-                        android:textSize="11sp" />
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:enabled="false"
+                        android:hint="age : 0" />
+
+                    <EditText
+                        android:id="@+id/editBirthday_relation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:maxLength="10"
+                        android:hint="relation" />
 
                 </LinearLayout>
             </LinearLayout>
 
+
         </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
+    </ScrollView>
+    <TextView
+        android:id="@+id/editBirthday_save"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="9"
-        android:background="@color/green_b">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Save"
-            android:textColor="#ffffff"
-            android:textSize="22sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:background="@color/green_b"
+        android:text="Save"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_gravity="bottom"/>
+</android.support.design.widget.CoordinatorLayout>

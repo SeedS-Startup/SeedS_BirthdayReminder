@@ -68,11 +68,7 @@ public class Convertor {
         int months = (int) (difference / (1000 * 60 * 60 * 24 * 30));
         int years = (int) (difference / (1000 * 60 * 60 * 24 * 30 * 12));
 
-        //may have some problems
-         if (Math.abs(days)-(years*30 * 12)!= 0)
-            return (Math.abs(days)-(years*30 * 12) );
-        else
-            return 0;
+         return days;
 
     }
 

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/birthdate_whole_item"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="2.5dp"
+    android:layout_marginTop="2.5dp"
+    android:background="@color/white"
+    android:orientation="vertical"
     android:weightSum="100"
-    android:orientation="vertical">
+    app:cardCornerRadius="12dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="16"
         android:orientation="horizontal"
         android:weightSum="100">
@@ -16,19 +21,19 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="10"/>
+            android:layout_weight="10" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="80"
-            android:weightSum="100"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="100">
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="15"/>
+                android:layout_weight="10" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,173 +43,161 @@
                 android:weightSum="100">
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="25"
-                    android:background="@drawable/rectangle"
                     android:id="@+id/picture"
-                    />
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/balloon"/>
 
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="13"/>
+                    android:layout_weight="13" />
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="61"
-                    android:orientation="vertical"
-                    android:weightSum="100">
+                    android:layout_weight="65"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:weightSum="100"
-                        android:layout_weight="25"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="31.5"
-                            android:text="August"
                             android:id="@+id/month"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="August"
                             android:textColor="@color/green_a"
-                            android:gravity="center"/>
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="8"
-                            android:text="20"
                             android:id="@+id/day"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="20"
                             android:textColor="@color/grey_a"
-                            android:gravity="center"/>
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.5"
-                            android:text=","
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=", "
                             android:textColor="@color/grey_a"
-                            android:gravity="center"/>
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="15"
-                            android:text="1977"
                             android:id="@+id/year"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="1977"
                             android:textColor="@color/grey_a"
-                            android:gravity="center"/>
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:text="("
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="  ( "
                             android:textColor="@color/green_a"
-                            android:gravity="center"/>
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="11"
-                            android:text="43"
                             android:id="@+id/age"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="43"
                             android:textColor="@color/green_a"
-                            android:gravity="center"/>
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="25"
-                            android:text="years old"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text=" years old "
                             android:textColor="@color/grey_a"
-                            android:gravity="center"/>
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="2"
+                            android:gravity="center"
                             android:text=")"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
                             android:textColor="@color/green_a"
-                            android:gravity="center"/>
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
 
                     </LinearLayout>
 
 
                     <TextView
+                        android:id="@+id/fullName"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="49"
+                        android:layout_marginBottom="3dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Amy Adams"
-                        android:id="@+id/fullName"
                         android:textColor="#000000"
-                        android:textSize="15sp"
-                        android:gravity="center"/>
+                        android:textSize="13sp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:weightSum="100"
-                        android:layout_weight="25"
-                        android:orientation="horizontal"
-                        android:gravity="center">
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="8"
-                            android:text="In"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="In "
                             android:textColor="@color/grey_a"
-                            android:gravity="center"/>
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="12"
-                            android:text="30"
                             android:id="@+id/days_to_event"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="30"
                             android:textColor="@color/green_a"
-                            android:gravity="center"/>
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_weight="15"
-                            android:text="Days"
-                            android:textSize="12sp"
-                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text=" Days"
                             android:textColor="@color/grey_a"
-                            android:gravity="center"/>
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
 
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -215,7 +208,7 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="15"/>
+                android:layout_weight="15" />
 
 
         </LinearLayout>
@@ -223,4 +216,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</android.support.v7.widget.CardView>

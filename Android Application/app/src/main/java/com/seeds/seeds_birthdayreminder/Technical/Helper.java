@@ -1,5 +1,6 @@
 package com.seeds.seeds_birthdayreminder.Technical;
 
+import android.app.PendingIntent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.widget.EditText;
@@ -25,6 +26,7 @@ public class Helper {
     public static EditText addBirthday_phone;
     public static EditText addBirthday_letter;
     public static EditText addBirthday_age;
+    public static ImageView addBirthday_photo;
     public static EditText addBirthday_relation;
     public static ImageView addBirthday_back;
     public static TextView addBirthday_saveBtn;
@@ -46,9 +48,40 @@ public class Helper {
     public static TextView overview_lastBirthday;
     public static TextView overview_age;
     public static TextView overview_relation;
+    public static ImageButton overview_editButton;
+    public static ImageView overview_picture;
+
+    public static EditText editBirthday_name;
+    public static TextView editBirthday_date;
+    public static EditText editBirthday_email;
+    public static EditText editBirthday_phone;
+    public static EditText editBirthday_letter;
+    public static EditText editBirthday_age;
+    public static EditText editBirthday_relation;
+    public static ImageView editBirthday_back;
+    public static TextView editBirthday_saveBtn;
+    public static ImageView editBirthday_photo;
+
+    public static TextView d1;
+    public static TextView d2;
+    public static TextView d3;
+    public static TextView d4;
+    public static TextView d5;
+    public static TextView d6;
+    public static TextView d7;
 
 
+    private PendingIntent pendingIntent;
 
 
-
+    public static TextView alarm_name;
+    public static TextView alarm_date;
+    public static TextView alarm_email;
+    public static TextView alarm_phone;
+    public static TextView alarm_letter;
+    public static TextView alarm_nextBirthday;
+    public static TextView alarm_lastBirthday;
+    public static TextView alarm_age;
+    public static TextView alarm_relation;
+    public static ImageView alarm_photo;
 }

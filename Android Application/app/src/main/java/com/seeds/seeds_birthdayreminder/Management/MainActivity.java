@@ -7,6 +7,8 @@ import android.os.Build;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import java.util.*;
+import java.io.*;
 import android.view.View;
 
 import com.seeds.seeds_birthdayreminder.Activity.AddBirthdayActivity;
@@ -25,6 +27,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViews();
         hideStatusBar();
         handleListeners();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .replace(R.id.main_fragment, new ListFragment())
+                .commit();
     }
 
     private void hideStatusBar() {

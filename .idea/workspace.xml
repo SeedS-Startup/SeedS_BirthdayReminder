@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="036e5729-4e91-4097-a2a1-547e35f7881d" name="Default" comment="" />
+    <list default="true" id="036e5729-4e91-4097-a2a1-547e35f7881d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/Android Application/.idea/caches/build_file_checksums.ser" />
+      <change beforePath="$PROJECT_DIR$/Android Application/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/build.gradle" afterPath="$PROJECT_DIR$/Android Application/app/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/AndroidManifest.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Activity/AddBirthdayActivity.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Activity/AddBirthdayActivity.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Activity/EditBirthdayActivity.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Activity/EditBirthdayActivity.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Adapter/BirthdayListAdapter.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Adapter/BirthdayListAdapter.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Adapter/CalendarListAdapter.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Adapter/CalendarListAdapter.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Configuration/AlarmHandler.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Configuration/AlarmHandler.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Database/Database.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Database/test.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Entity/BirthdayEvent.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Entity/BirthdayEvent.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Entity/CalendarItem.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Entity/CalendarItem.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Fragment/BirthdayOverview.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Fragment/BirthdayOverview.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Fragment/CalendarFragment.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Fragment/CalendarFragment.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Fragment/ListFragment.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Fragment/ListFragment.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Management/MainActivity.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Management/MainActivity.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Technical/Helper.java" afterPath="$PROJECT_DIR$/Android Application/app/src/main/java/com/seeds/seeds_birthdayreminder/Technical/Helper.java" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/activity_add_birthday.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/activity_add_birthday.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/activity_edit_birthday.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/activity_edit_birthday.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/birthday_item_xml.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/birthday_item_xml.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/calendar_item_xml.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/calendar_item_xml.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/fragment_birthday_overview.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/fragment_birthday_overview.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/fragment_list.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/res/layout/fragment_list.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/Android Application/app/src/main/res/values/colors.xml" />
+      <change beforePath="$PROJECT_DIR$/Android Application/build.gradle" afterPath="$PROJECT_DIR$/Android Application/build.gradle" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +66,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">

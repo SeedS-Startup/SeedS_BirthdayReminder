@@ -1,5 +1,6 @@
 package com.seeds.seeds_birthdayreminder.Fragment;
 
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,11 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.gson.Gson;
 import com.seeds.seeds_birthdayreminder.Adapter.BirthdayListAdapter;
+import com.seeds.seeds_birthdayreminder.DatabaseHelper.DatabaseHelper;
 import com.seeds.seeds_birthdayreminder.Entity.BirthdayEvent;
 import com.seeds.seeds_birthdayreminder.R;
 import com.seeds.seeds_birthdayreminder.Technical.Helper;
 
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -37,7 +41,21 @@ public class ListFragment extends Fragment {
         Helper.birthdayLayoutManager = new LinearLayoutManager(getContext());
         Helper.birthdayRecyclerView.setHasFixedSize(true);
         Helper.birthdayRecyclerView.setLayoutManager(Helper.birthdayLayoutManager);
+        Cursor cursor=DatabaseHelper.getInstance(view.getContext()).getAllData();
+        while (cursor.moveToNext())
+        {
+            Log.d("FGCSE",cursor.getString(5));
+            BirthdayEvent event=new BirthdayEvent(cursor.getInt(0),cursor.getString(1),
+                    cursor.getInt(6),
+                    cursor.getString(3),cursor.getString(5),
+                    new Gson().fromJson(cursor.getString(7),Calendar.class));
+            event.setPhoneNumber(cursor.getString(8));
+            event.setEmailAddress(cursor.getString(4));
+            event.setPicture(cursor.getString(2));
+            items.add(event);
+        }
         Helper.birthdayAdapter = new BirthdayListAdapter(items, view.getContext(), Helper.birthdayRecyclerView);
+        Helper.birthdayRecyclerView.setAdapter(Helper.birthdayAdapter);
         /*((BirthdayListAdapter) Helper.birthdayAdapter).setLoadMoreListener(() -> {
 
             Helper.birthdayRecyclerView.post(() -> {
@@ -47,7 +65,6 @@ public class ListFragment extends Fragment {
             //Calling loadMore function in Runnable to fix the
             // java.lang.IllegalStateException: Cannot call this method while RecyclerView is computing a layout or scrolling error
         });*/
-        Helper.birthdayRecyclerView.setAdapter(Helper.birthdayAdapter);
     }
 
     private void findViews(View view) {

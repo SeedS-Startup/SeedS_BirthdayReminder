@@ -13,6 +13,7 @@ import com.seeds.seeds_birthdayreminder.Adapter.BirthdayListAdapter;
 import com.seeds.seeds_birthdayreminder.Adapter.CalendarListAdapter;
 import com.seeds.seeds_birthdayreminder.Entity.BirthdayEvent;
 import com.seeds.seeds_birthdayreminder.Entity.CalendarItem;
+import com.seeds.seeds_birthdayreminder.Entity.DayItem;
 import com.seeds.seeds_birthdayreminder.R;
 import com.seeds.seeds_birthdayreminder.Technical.Helper;
 
@@ -39,6 +40,7 @@ public class CalendarFragment extends Fragment {
         Helper.calendarLayoutManager = new LinearLayoutManager(getContext());
         Helper.calendarRecyclerView.setHasFixedSize(true);
         Helper.calendarRecyclerView.setLayoutManager(Helper.calendarLayoutManager);
+        initializeCalendars();
         Helper.calendarAdapter = new CalendarListAdapter(items, view.getContext(), Helper.calendarRecyclerView);
        /* ((BirthdayListAdapter) Helper.calendarAdapter).setLoadMoreListener(() -> {
 
@@ -50,6 +52,20 @@ public class CalendarFragment extends Fragment {
             // java.lang.IllegalStateException: Cannot call this method while RecyclerView is computing a layout or scrolling error
         });*/
         Helper.calendarRecyclerView.setAdapter(Helper.calendarAdapter);
+    }
+
+    private void initializeCalendars() {
+        CalendarItem calendar;
+        List<DayItem> list=new LinkedList<>();
+        for (int i = 2018; i < 2119; i++) {
+            for (int j = 0; j < 12; j++) {
+                for(int k=1;k<=31;k++)
+                    list.add(new DayItem(k));
+                calendar = new CalendarItem(i, j, list);
+
+                items.add(calendar);
+            }
+        }
     }
 
     private void findViews(View view) {
